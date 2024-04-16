@@ -1,26 +1,25 @@
 <?
-$arMenuLinks = array(
-    array(
-        "Партнерам",
-        "/",
-        array(),
-        array(),
-        "",
-    ),
-    array(
-        "Где купить",
-        "/",
-        array(),
-        array(),
-        "",
-    ),
-    array(
-        "Контакты",
-        "/",
-        array(),
-        array(),
-        "",
-    ),
+$aMenuLinks = Array(
+	Array(
+		"Партнерам", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Где купить", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	)
 );
-
 ?>

@@ -64,23 +64,27 @@
                 <div class="header-col__subrow">
                     <nav class="header-nav">
                         <?$APPLICATION->IncludeComponent(
-                            "bitrix:menu",
-                            "top_nav_menu",
-                            array(
-                                "ALLOW_MULTI_SELECT" => "N",
-                                "DELAY" => "N",
-                                "MAX_LEVEL" => "1",
-                                "MENU_CACHE_GET_VARS" => array(
+                                "bitrix:menu", 
+                                "top_nav_menu", 
+                                array(
+                                    "ROOT_MENU_TYPE" => "top_nav_menu",
+                                    "MAX_LEVEL" => "1",
+                                    "USE_EXT" => "Y",
+                                    "DELAY" => "N",
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "MENU_CACHE_TYPE" => "N",
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "MENU_CACHE_GET_VARS" => array(
+                                        0 => "arMenuLinks",
+                                        1 => "",
+                                    ),
+                                    "COMPONENT_TEMPLATE" => "top_nav_menu",
+                                    "CHILD_MENU_TYPE" => "right"
                                 ),
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_TYPE" => "N",
-                                "MENU_CACHE_USE_GROUPS" => "Y",
-                                "ROOT_MENU_TYPE" => "top_nav_menu",
-                                "USE_EXT" => "Y",
-                                "COMPONENT_TEMPLATE" => "top_nav_menu"
-                            ),
-                            false
-                        );?>
+                                false
+                            );
+                        ?>
                     </nav>
                     <div class="header-contacts"><a class="header-contacts__item btn-hover_parent" href="tel:+78614725800">
                             <div class="btn-hover_circle white header_link"></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">

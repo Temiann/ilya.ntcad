@@ -8,44 +8,7 @@
                 </svg></div>
             <div class="header-production__inner-title">Продукция</div>
         </div>
-        <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list", 
-	"menu_section", 
-	array(
-		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COUNT_ELEMENTS" => "Y",
-		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-		"FILTER_NAME" => "sectionsFilter",
-		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
-		"IBLOCK_ID" => "12",
-		"IBLOCK_TYPE" => "MAIN_PAGE",
-		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(
-			0 => "NAME",
-			1 => "PICTURE",
-			2 => "DETAIL_PICTURE",
-			3 => "",
-		),
-		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(
-			0 => "UF_CATALOG_MENU_IMG",
-			1 => "UF_CATALOG_TEXT_COLOR",
-			2 => "UF_CATALOG_MENU_IMG_MOB",
-			3 => "",
-		),
-		"SHOW_PARENT_NAME" => "Y",
-		"TOP_DEPTH" => "2",
-		"VIEW_MODE" => "LINE",
-		"COMPONENT_TEMPLATE" => "menu_section"
-	),
-	false
-);?>
+        <? // Место под компонент ?>
     </div>
 </div>
 <div class="popup popup-vacancies" data-popup-wrapper="mail-company" data-overlay-on>
