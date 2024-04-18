@@ -99,11 +99,23 @@
                 <div class="header-main__contacts">
                     <div class="header-main__contacts-col">
                         <div class="header-main__contacts-office">Центральный офис</div>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "template1",
+                            array(
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH" => "/local/templates/mainPage/include/template/contacts.php",
+                                "EDIT_TEMPLATE" => "",
+                                "COMPONENT_TEMPLATE" => "template1"
+                            ),
+                            false
+                        );?>
                         <?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
-                               "AREA_FILE_SHOW" => "file",
-                               "PATH" => "/local/templates/mainPage/include/template/contacts.php",
-                               "EDIT_TEMPLATE" => ""
-                           )
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH" => "/local/templates/mainPage/include/template/mail.php",
+                                "EDIT_TEMPLATE" => "",
+                                "COMPONENT_TEMPLATE" => "mailtemplate"
+                            )
                         );?>
                     </div>
                     <div class="header-main__contacts-col right-col">
