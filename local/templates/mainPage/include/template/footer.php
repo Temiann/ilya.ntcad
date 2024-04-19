@@ -97,44 +97,86 @@
                 <div class="footer-content__col right">
                     <div class="footer-content__subcol">
                         <div class="footer-content__subcol-top">
-                            <nav class="footer-content__nav">
-                                <?$APPLICATION->IncludeComponent(
+                            <?$APPLICATION->IncludeComponent(
                                     "bitrix:menu",
-                                    "footer_menu1",
-                                    array(
-                                        "ALLOW_MULTI_SELECT" => "N",
-                                        "CHILD_MENU_TYPE" => "",
-                                        "DELAY" => "N",
-                                        "MAX_LEVEL" => "1",
-                                        "MENU_CACHE_GET_VARS" => array(
+                                    "bottom_nav",
+                                        array(
+                                            "ROOT_MENU_TYPE" => "bottom_nav_menu",
+                                            "ALLOW_MULTI_SELECT" => "N",
+                                            "CHILD_MENU_TYPE" => "right",
+                                            "DELAY" => "N",
+                                            "MAX_LEVEL" => "1",
+                                            "MENU_CACHE_GET_VARS" => array(
+                                                0 => "arMenuLinks",
+                                                1 => "",
+                                            ),
+                                            "MENU_CACHE_TIME" => "3600",
+                                            "MENU_CACHE_TYPE" => "N",
+                                            "MENU_CACHE_USE_GROUPS" => "Y",
+                                            "USE_EXT" => "Y",
+                                            "COMPONENT_TEMPLATE" => "bottom_nav"
                                         ),
-                                        "MENU_CACHE_TIME" => "3600",
-                                        "MENU_CACHE_TYPE" => "N",
-                                        "MENU_CACHE_USE_GROUPS" => "Y",
-                                        "ROOT_MENU_TYPE" => "top",
-                                        "USE_EXT" => "Y",
-                                        "COMPONENT_TEMPLATE" => "footer_menu1"
-                                    ),
-                                    false
-                                );?>
-                            </nav>
+                                false
+                            );?>
                         </div>
                         <div class="footer-content__subcol-bot">
-                        <? // Место под компонент ?>
+                        <?$APPLICATION->IncludeComponent("bitrix:main.include", "privacytemplatefooter", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => "/local/templates/mainPage/include/template/privacy.php",
+                                    "EDIT_TEMPLATE" => "",
+                                    "COMPONENT_TEMPLATE" => "privacytemplatefooter"
+                                ),
+                            false
+                        );?>
                         </div>
                     </div>
                     <div class="footer-content__subcol">
                         <div class="footer-content__subcol-top">
-                            <nav class="footer-content__nav">
-                                <? // Место под компонент ?>
-                            </nav>
+                            <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "bottom_nav2",
+                                    array(
+                                        "ROOT_MENU_TYPE" => "bottom_nav_menu2",
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CHILD_MENU_TYPE" => "right",
+                                        "DELAY" => "N",
+                                        "MAX_LEVEL" => "1",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                            0 => "arMenuLinks",
+                                            1 => "",
+                                        ),
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "USE_EXT" => "Y",
+                                        "COMPONENT_TEMPLATE" => "bottom_nav2"
+                                    ),
+                                false
+                            );?>
                         </div>
                     </div>
                     <div class="footer-content__subcol">
                         <div class="footer-content__subcol-top">
                             <div class="footer-content__contacts">
                                 <div class="footer-content__contacts-title">Центральный офис</div>
-                                <? // Место под компонент ?>
+                                <?$APPLICATION->IncludeComponent("bitrix:main.include", "telephonetemplatefooter",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => "/local/templates/mainPage/include/template/contacts.php",
+                                        "EDIT_TEMPLATE" => "",
+                                        "COMPONENT_TEMPLATE" => "telephonetemplatefooter"
+                                    ),
+                                    false
+                                );?>
+                                <?$APPLICATION->IncludeComponent("bitrix:main.include", "emailtemplatefooter",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => "/local/templates/mainPage/include/template/mail.php",
+                                        "EDIT_TEMPLATE" => "",
+                                        "COMPONENT_TEMPLATE" => "emailtemplatefooter"
+                                    ),
+                                    false
+                                );?>
                             </div>
                         </div>
                         <div class="footer-content__subcol-bot">
