@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+    array(
+        "Рецепты",
+        "/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Где купить",
+        "/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Контакты",
+        "/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Видео",
+        "/",
+        array(),
+        array(),
+        "",
+    ),
+);
+?>
