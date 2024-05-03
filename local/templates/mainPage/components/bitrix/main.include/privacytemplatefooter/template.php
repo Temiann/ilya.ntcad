@@ -14,5 +14,5 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
 ?>
 <?if($arResult["FILE"] <> ''):?>
-    <a class="footer-content__policy" href="#"><?=$arResult['privacy']?></a>
+    <a class="footer-content__policy" target="_blank" href="<?=$arResult['pathToFile']?>"><?=$arResult['privacy']?></a>
 <?endif;?>

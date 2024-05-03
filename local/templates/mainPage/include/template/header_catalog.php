@@ -8,7 +8,29 @@
                 </svg></div>
             <div class="header-production__inner-title">Продукция</div>
         </div>
-        <? // Место под компонент ?>
+        <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "catalogmenu", Array(
+	"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",	// Дополнительный фильтр для подсчета количества элементов в разделе
+		"VIEW_MODE" => "TEXT",	// Вид списка подразделов
+		"SHOW_PARENT_NAME" => "Y",	// Показывать название раздела
+		"IBLOCK_TYPE" => "catalog_zdorprod",	// Тип инфоблока
+		"IBLOCK_ID" => "5",	// Инфоблок
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_CODE" => "",	// Код раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
+		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",	// Скрывать разделы с нулевым количеством элементов
+		"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+		"SECTION_FIELDS" => "",	// Поля разделов
+		"SECTION_USER_FIELDS" => ["","UF_IMGHEADERPCPNG","UF_IMG_HEAD_MOBILE","UF_WHITE","UF_BLUE"],	// Свойства разделов
+		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_NOTES" => "",
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+	),
+	false
+);?>
     </div>
 </div>
 <div class="popup popup-vacancies" data-popup-wrapper="mail-company" data-overlay-on>

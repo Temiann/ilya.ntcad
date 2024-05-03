@@ -110,21 +110,31 @@
                             ),
                             false
                         );?>
-                        <?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
-                                "AREA_FILE_SHOW" => "file",
-                                "PATH" => "/local/templates/mainPage/include/template/mail.php",
-                                "EDIT_TEMPLATE" => "",
-                                "COMPONENT_TEMPLATE" => "mailtemplate"
-                            )
-                        );?>
+                        <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	"mailtemplate", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => "/local/templates/mainPage/include/template/mail.php",
+		"EDIT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => "mailtemplate"
+	),
+	false
+);?>
                     </div>
                     <div class="header-main__contacts-col right-col">
-                        <?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
-                                "AREA_FILE_SHOW" => "file",
-                                "PATH" => "/local/templates/mainPage/include/template/privacy.php",
-                                "EDIT_TEMPLATE" => ""
-                            )
-                        );?>
+                        <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	"privacy", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => "/local/templates/mainPage/include/template/privacy.php",
+		"EDIT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => "privacy",
+		"SELECT_FILE" => "/tutututu.pdf"
+	),
+	false
+);?>
                         <div class="header-main__contacts-bot">
                             <div class="header-main__contacts-copy">© 2008-<?echo(date('Y'));?> «Здоровые продукты»</div>
                             <div class="header-main__contacts-dev"><span>Сделано в</span><a href="https://cloudmill.ru" target="blank"> Клаудмил</a></div>

@@ -10,4 +10,5 @@ foreach ($arr as $value){
 }
 $arResult['textNumber'] = $contactNumber;
 $arResult['number'] = $number;
+
 ?>
