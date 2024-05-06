@@ -29,6 +29,8 @@ IncludeTemplateLangFile(__FILE__);
 			1 => "UF_CATALOG_MAIN_IMG",
 			2 => "UF_WHITE",
 			3 => "UF_BLUE",
+            4 => "UF_MAIN_MOBILE_IMG",
+            5 => "UF_FLAG_WHITE"
 		),
 		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
 		"CACHE_TYPE" => "A",	// Тип кеширования

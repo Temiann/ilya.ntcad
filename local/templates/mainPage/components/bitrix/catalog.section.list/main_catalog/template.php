@@ -26,7 +26,7 @@ $this->setFrameMode(true);
             </picture>
         </div>
         <div class="main-catalog__item-row">
-            <div class="main-catalog__item-title <?=($item["ID"] === "6" || $item["ID"] === "7")?$item["WHITE"]:$item["BLUE"]?>"><?=$item["NAME_SECTION"]?></div>
+            <div class="main-catalog__item-title <?=($item["FLAG"] == "1")?$item["WHITE"]:$item["BLUE"]?>"><?=$item["NAME_SECTION"]?></div>
         </div>
         <div class="main-catalog__item-svg">
             <div class="button button-arrow_right btn-hover_parent">
