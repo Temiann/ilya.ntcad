@@ -21,6 +21,6 @@ foreach ($arResult["ITEMS"] as $key => $value){
     }
     $arResult["SLIDER_ITEMS"][$key]["PREVIEW_PICTURE"] = $picture;
 }?>
-<?$APPLICATION->restartBuffer(); ?>
-    <pre><?=var_dump($arResult);?></pre>
-<?php die();?>
+<?//$APPLICATION->restartBuffer(); ?>
+<!--    <pre>--><?php //=var_dump($arResult);?><!--</pre>-->
+<?php //die();?>
