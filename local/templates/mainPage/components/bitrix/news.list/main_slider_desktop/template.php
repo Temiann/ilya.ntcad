@@ -47,10 +47,13 @@
                             </div>
                         <div class="main-slider__content-title" data-swiper-parallax="-1000"><?=$item['NAME']?></div>
                         <div class="main-slider__content-desk" data-swiper-parallax="-2000"><?=$item['DESCRIPTION']?></div>
-                        <div class="main-slider__content-bot" data-swiper-parallax="-2500"><a class="main-slider__content-button btn-hover_parent" href="<?= ($_SERVER["DOCUMENT_ROOT"] . SITE_TEMPLATE_PATH . $item["HREF_STR"])?>">
+                        <?if(!empty($item["HREF_STR"])):?>
+                        <div class="main-slider__content-bot" data-swiper-parallax="-2500"><a class="main-slider__content-button btn-hover_parent" href="<?=$item["HREF_STR"]?>">
                                 <div class="btn-hover_circle white"></div>
                                 <p><?=$item['ABOUT']?></p>
-                            </a></div>
+                            </a>
+                        </div>
+                        <?endif;?>
                     </div>
                 </div>
                 <? endforeach ?>
