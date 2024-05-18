@@ -12,7 +12,7 @@ IncludeTemplateLangFile(__FILE__);
             "DISPLAY_PREVIEW_TEXT" => "Y",
             "AJAX_MODE" => "Y",
             "IBLOCK_TYPE" => "slider_main",
-            "IBLOCK_ID" => "6",
+            "IBLOCK_ID" => "slidermain",
             "NEWS_COUNT" => "5",
             "SORT_BY1" => "ACTIVE_FROM",
             "SORT_ORDER1" => "ASC",
